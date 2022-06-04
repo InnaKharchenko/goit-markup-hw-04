@@ -16,6 +16,7 @@
   --border-icons-color: ;
   /*icons*/
   --main-icons-color: #AFB1B8;
+  --bg-icons-color: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -131,12 +132,14 @@ h1, h2, h3, p {
 .contact-list {
   display: flex;
   margin-left: auto;
+  align-items: center;
 }
 .contact-list .contact-item + .contact-item {
   margin-left: 50px;
 }
 .contact-link {
-  display: block;
+  display: flex; 
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   text-decoration: none;
@@ -150,7 +153,10 @@ h1, h2, h3, p {
 .contact-link:focus {
   color: var(--accent-color);
 }
-
+.contact-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
 /*section-hero*/
 .hero-section {
   padding-top: 200px;
@@ -204,6 +210,9 @@ h1, h2, h3, p {
 .qualities-item {
   width: 270px;
 }
+
+
+
 .qualities-list .qualities-item + .qualities-item {
   margin-left: 30px;
 }
@@ -226,6 +235,14 @@ h1, h2, h3, p {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
+}
+.qualities-picture {
+  height: 120px;
+  margin-bottom: 30px;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+  background-color: var(--accent-bg-color)
 }
 
 /*section What are we doing*/
@@ -358,6 +375,7 @@ h1, h2, h3, p {
 }
 
 .clients-item {
+  display: flex;
   width: 170px;
     height: 92px;
     border: 1px solid var(--main-icons-color);
@@ -368,6 +386,9 @@ h1, h2, h3, p {
 .clients-list .clients-item + .clients-item {
   margin-left: 30px;
 }
+.clients-icon {
+  fill: currentColor;
+}
 
 
                   /*footer*/
@@ -376,7 +397,12 @@ h1, h2, h3, p {
   padding-bottom: 60px;
   background-color: var(--main-bg-color);
 }
-
+.footer-container {
+  display: flex;
+}
+.footer-contacts {
+  margin-right: 70px;
+}
 .logo-footer {
   display: inline-block;
   margin-bottom: 20px;
@@ -426,6 +452,45 @@ h1, h2, h3, p {
 .contacts-footer:hover,
 .contacts-footer:focus {
   color: var(--accent-color);
+}
+
+.footer-description {
+  font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: var(--second-accent-text-color);
+}
+
+
+
+.footer-socials-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-socials-list .footer-socials-item + .footer-socials-item {
+  margin-left: 10px;
+} 
+
+.footer-socials-link {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: var(--second-accent-text-color);
+    background-color: var(--bg-icons-color);
+
+}
+.footer-socials-link:hover,
+.footer-socials-link:focus{
+  background-color: var(--accent-color);
+}
+.footer-socials-icon {
+  fill: currentColor;
 }
 
 /*Portfolio*/
